@@ -1,3 +1,7 @@
 export default function Comments() {
-  return;
+  return (
+    <>
+      <div className="comments"></div>
+    </>
+  );
 }
