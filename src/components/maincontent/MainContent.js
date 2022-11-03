@@ -22,6 +22,15 @@ export default function MainContent() {
   const [videos, setVideos] = useState(getVideos(videoId));
   const [videoDetails, setVideoDetails] = useState(getVideoDetails(videoId));
 
+  const clickHandler = (event, videoId) => {
+    event.preventDefault();
+
+    console.log(event);
+    setVideoId(videoId);
+    setVideos(getVideos(videoId));
+    setVideoDetails(getVideoDetails(videoId));
+  };
+
   return (
     <>
       <section className="hero-container">
@@ -32,7 +41,7 @@ export default function MainContent() {
         <Comments />
       </section>
       <section className="next-videos">
-        <NextVideosList videos={videos} />
+        <NextVideosList videos={videos} onVideoListClick={clickHandler} />
       </section>
     </>
   );

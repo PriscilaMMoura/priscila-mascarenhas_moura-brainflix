@@ -1,7 +1,8 @@
 // import "./NextVideosList.scss";
 import NextVideos from "../nextvideos/NextVideos";
 
-export default function NextVideosList({ videos }) {
+export default function NextVideosList({ videos, onVideoListClick }) {
+  console.log(onVideoListClick);
   return (
     <>
       <label className="next-videos__label-text" htmlFor="">
@@ -14,6 +15,8 @@ export default function NextVideosList({ videos }) {
             image={video.image}
             title={video.title}
             channel={video.channel}
+            onVideoClick={onVideoListClick}
+            id={video.id}
           />
         );
       })}
