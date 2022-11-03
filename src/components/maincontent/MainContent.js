@@ -3,7 +3,7 @@ import Hero from "../hero/Hero";
 import VideoDetails from "../videodetails/VideoDetails";
 import Comments from "../comments/Comments";
 import NextVideos from "../nextvideos/NextVideos";
-
+//
 export default function MainContent() {
   return (
     <>
