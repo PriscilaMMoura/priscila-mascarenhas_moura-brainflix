@@ -1,7 +1,13 @@
-export default function Comments() {
+import "./Comments.scss";
+
+export default function Comments({ name, timestamp, comment }) {
   return (
     <>
-      <div className="comments"></div>
+      <div className="comments">
+        <span>{name}</span>
+        <span>{timestamp}</span>
+        <span>{comment}</span>
+      </div>
     </>
   );
 }

@@ -8,23 +8,17 @@ export default function Header() {
         <img className="nav-bar__logo" src={logo} alt="BrainFlix logo" />
       </div>
       <div className="nav-bar__search-container">
-        <form className="nav-bar__form" action="submit">
-          <div className="nav-bar__search-avatar-wrap">
-            <input
-              className="nav-bar__input"
-              type="text"
-              placeholder="Search"
+        <div className="nav-bar__search-avatar-wrap">
+          <input className="nav-bar__input" type="text" placeholder="Search" />
+          <div className="nav-bar__avatar-container--small">
+            <img
+              className="nav-bar__avatar"
+              src="../../assets/images/Mohan-muruge.jpg"
+              alt="user avatar"
             />
-            <label className="nav-bar__avatar-container--small">
-              <img
-                className="nav-bar__avatar"
-                src="../../assets/images/Mohan-muruge.jpg"
-                alt="user avatar"
-              />
-            </label>
           </div>
-          <button className="nav-bar__buttton">UPLOAD</button>
-        </form>
+        </div>
+        <button className="nav-bar__buttton">UPLOAD</button>
         <div className="nav-bar__avatar-container--medium">
           <img
             className="nav-bar__avatar"

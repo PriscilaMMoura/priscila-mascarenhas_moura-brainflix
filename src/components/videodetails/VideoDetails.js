@@ -6,7 +6,7 @@ export default function VideoDetails({ videoDetails }) {
   const views = videoDetails.views;
   const likes = videoDetails.likes;
   const description = videoDetails.description;
-
+  console.log(videoDetails);
   return (
     <>
       <div className="video-details">

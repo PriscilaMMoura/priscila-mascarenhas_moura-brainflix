@@ -1,7 +1,7 @@
 import "./MainContent.scss";
 import Hero from "../hero/Hero";
 import VideoDetails from "../videodetails/VideoDetails";
-import Comments from "../comments/Comments";
+import CommentsList from "../commentslist/CommentsList";
 import NextVideosList from "../nextvideoslist/NextVideosList";
 
 export default function MainContent({
@@ -9,6 +9,7 @@ export default function MainContent({
   videoDetails,
   onMainContentClick,
 }) {
+  // console.log(videoDetails);
   return (
     <>
       <section className="hero-container">
@@ -16,7 +17,7 @@ export default function MainContent({
       </section>
       <section className="comments-videos-details-container">
         <VideoDetails videoDetails={videoDetails} />
-        <Comments />
+        <CommentsList commentsList={videoDetails.comments} />
       </section>
       <section className="next-videos">
         <NextVideosList videos={videos} onVideoListClick={onMainContentClick} />

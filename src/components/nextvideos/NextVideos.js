@@ -7,7 +7,7 @@ export default function NextVideos({
   onVideoClick,
   id,
 }) {
-  console.log(onVideoClick);
+  // console.log(onVideoClick);
   return (
     <>
       <div

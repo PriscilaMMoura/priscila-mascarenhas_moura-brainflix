@@ -2,7 +2,7 @@
 import NextVideos from "../nextvideos/NextVideos";
 
 export default function NextVideosList({ videos, onVideoListClick }) {
-  console.log(onVideoListClick);
+  // console.log(onVideoListClick);
   return (
     <>
       <label className="next-videos__label-text" htmlFor="">
