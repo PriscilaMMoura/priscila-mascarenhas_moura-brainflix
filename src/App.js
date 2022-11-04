@@ -3,6 +3,7 @@ import MainContent from "./components/maincontent/MainContent";
 import videoDetailsData from "./data/videoDetails.json";
 import videosData from "./data/videos.json";
 import { useState } from "react";
+import "./styles/main.scss";
 
 function getVideos(videoId) {
   return videosData.filter((video) => video.id !== videoId);
@@ -27,10 +28,10 @@ function App() {
 
   return (
     <div className="app-container">
-      <header>
+      <header className="header-container">
         <Header />
       </header>
-      <main>
+      <main className="main-container">
         <MainContent
           videos={videos}
           videoDetails={videoDetails}
