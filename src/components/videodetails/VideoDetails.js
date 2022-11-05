@@ -1,25 +1,49 @@
+import "./VideoDetails.scss";
+import viewsIcon from "../../assets/icons/views.svg";
+import likesIcon from "../../assets/icons/likes.svg";
+
 export default function VideoDetails({ videoDetails }) {
+  const formatDate = (date) => {
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    return `${month}/${day}/${year}`;
+  };
+
+  const date = formatDate(new Date(videoDetails.timestamp));
   const title = videoDetails.title;
   const channel = videoDetails.channel;
-  //format timestamp
-  const timestamp = videoDetails.timestamp;
   const views = videoDetails.views;
   const likes = videoDetails.likes;
   const description = videoDetails.description;
-  console.log(videoDetails);
   return (
     <>
       <div className="video-details">
-        <h1>{title}</h1>
-        <div>
-          <span>By {channel}</span>
-          <span>{timestamp}</span>
+        <h1 className="video-details__page-header">{title}</h1>
+
+        <div className="video-details__body-copy-wrap">
+          <div className="video-details__item-wrap">
+            <span className="video-details__body-copy video-details__body-copy--channel">
+              By {channel}
+            </span>
+            <span className="video-details__body-copy">{date}</span>
+          </div>
+
+          <div className="video-details__item-wrap">
+            <div className="video-details__icons-wrap video-details__icons-wrap--views">
+              <img className="video-details__icon" src={viewsIcon} alt="" />
+              <span className="video-details__body-copy video-details__body-copy">
+                {views}
+              </span>
+            </div>
+
+            <div className="video-details__icons-wrap">
+              <img className="video-details__icon" src={likesIcon} alt="" />
+              <span className="video-details__body-copy">{likes}</span>
+            </div>
+          </div>
         </div>
-        <div>
-          <span>{views}</span>
-          <span>{likes}</span>
-        </div>
-        <p>{description}</p>
+        <p className="video-details__body-copy--small">{description}</p>
       </div>
     </>
   );

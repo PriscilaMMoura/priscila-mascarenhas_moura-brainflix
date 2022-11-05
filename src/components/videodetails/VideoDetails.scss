@@ -1,0 +1,91 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+
+.video-details {
+  margin: 24px 16px 16px 16px;
+  @include breakpoint.medium {
+    margin: 36px 36px 24px 36px;
+  }
+  &__page-header {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: color.$color-primary-dark;
+    padding-bottom: 16px;
+    @include breakpoint.medium {
+      font-size: 33px;
+      line-height: 44px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__body-copy-wrap {
+    padding: 16px 0;
+    border-top: 1px solid color.$color-secondary-light;
+    border-bottom: 1px solid color.$color-secondary-light;
+    display: flex;
+    flex-direction: row;
+    @include breakpoint.medium {
+      padding: 24px 0 16px 0;
+      justify-content: space-between;
+      border-top: none;
+    }
+  }
+
+  &__item-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    @include breakpoint.medium {
+      flex-direction: row;
+      width: auto;
+    }
+  }
+
+  &__icons-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    &--views {
+      padding-bottom: 16px;
+      @include breakpoint.medium {
+        padding-bottom: 0;
+        padding-right: 24px;
+      }
+    }
+  }
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__body-copy {
+    font-size: 13px;
+    font-weight: 400;
+    color: color.$color-primary-light;
+    @include breakpoint.medium {
+      font-size: 14px;
+    }
+
+    &--channel {
+      padding-bottom: 16px;
+      font-weight: 700;
+      color: color.$color-primary-dark;
+      @include breakpoint.medium {
+        padding-bottom: 0;
+        padding-right: 24px;
+      }
+    }
+
+    &--small {
+      font-size: 12px;
+      line-height: 18px;
+      color: color.$color-primary-dark;
+      padding-top: 16px;
+      @include breakpoint.medium {
+        font-size: 14px;
+        line-height: 22px;
+        padding-top: 24px;
+      }
+    }
+  }
+}
