@@ -12,7 +12,7 @@ export default function Header() {
       </div>
       <div className="nav-bar__search-container">
         <div className="nav-bar__search-avatar-wrap">
-          <div className="nav-bar__input-wrapper">
+          <form className="nav-bar__input-wrapper">
             <img className="nav-bar__search-icon" src={searchIcon} alt="" />
 
             <input
@@ -20,7 +20,7 @@ export default function Header() {
               type="text"
               placeholder="Search"
             />
-          </div>
+          </form>
 
           <div className="nav-bar__avatar-container nav-bar__avatar-container--small">
             <img
