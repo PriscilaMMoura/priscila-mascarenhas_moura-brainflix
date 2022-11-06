@@ -46,17 +46,18 @@ export default function commentsList({ commentsList, onFormSubmit }) {
           </form>
         </div>
       </div>
-
-      {commentsList.map((comment) => {
-        return (
-          <Comments
-            key={comment.id + comment.name}
-            name={comment.name}
-            timestamp={comment.timestamp}
-            comment={comment.comment}
-          />
-        );
-      })}
+      <div className="comments-list-container">
+        {commentsList.map((comment) => {
+          return (
+            <Comments
+              key={comment.id + comment.name}
+              name={comment.name}
+              timestamp={comment.timestamp}
+              comment={comment.comment}
+            />
+          );
+        })}
+      </div>
     </>
   );
 }

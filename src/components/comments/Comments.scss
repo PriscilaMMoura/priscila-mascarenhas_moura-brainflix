@@ -1,3 +1,56 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+
 .comments {
-  border: 3px solid black;
+  border-bottom: solid 0.063rem color.$color-secondary-light;
+  display: flex;
+
+  &__avatar-container {
+    margin: 1rem 1rem 0 0;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+    @include breakpoint.medium {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__avatar {
+    max-width: 2.5rem;
+    max-height: 2.25rem;
+    border-radius: 50%;
+
+    background-color: color.$color-secondary-light;
+  }
+
+  &__text-container {
+    padding: 1rem 0;
+    width: 100%;
+    @include breakpoint.medium {
+      padding: 1.5rem 0;
+    }
+  }
+
+  &__name-date-container {
+    display: flex;
+    padding-bottom: 1rem;
+  }
+
+  &__copy-body-text {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: color.$color-primary-dark;
+    overflow-wrap: anywhere;
+    @include breakpoint.medium {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &--user-name {
+      font-weight: 700;
+    }
+    &--date {
+      margin-left: auto;
+      color: color.$color-primary-light;
+    }
+  }
 }
