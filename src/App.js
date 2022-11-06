@@ -19,11 +19,16 @@ function App() {
   const [videos, setVideos] = useState(getVideos(videoId));
   const [videoDetails, setVideoDetails] = useState(getVideoDetails(videoId));
 
-  const clickHandler = (event, videoId) => {
+  const handleClick = (event, videoId) => {
     event.preventDefault();
+
     setVideoId(videoId);
     setVideos(getVideos(videoId));
     setVideoDetails(getVideoDetails(videoId));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
   };
 
   return (
@@ -35,7 +40,8 @@ function App() {
         <MainContent
           videos={videos}
           videoDetails={videoDetails}
-          onMainContentClick={clickHandler}
+          onMainContentClick={handleClick}
+          onMainContentSubmit={handleSubmit}
         />
       </main>
     </div>

@@ -8,6 +8,7 @@ export default function MainContent({
   videos,
   videoDetails,
   onMainContentClick,
+  onMainContentSubmit,
 }) {
   // console.log(videoDetails);
   return (
@@ -17,7 +18,10 @@ export default function MainContent({
       </section>
       <section className="comments-videos-details-container">
         <VideoDetails videoDetails={videoDetails} />
-        <CommentsList commentsList={videoDetails.comments} />
+        <CommentsList
+          commentsList={videoDetails.comments}
+          onFormSubmit={onMainContentSubmit}
+        />
       </section>
       <section className="next-videos">
         <NextVideosList videos={videos} onVideoListClick={onMainContentClick} />

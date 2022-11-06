@@ -3,7 +3,7 @@ import Comments from "../comments/Comments";
 import avatarImage from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
 
-export default function commentsList({ commentsList }) {
+export default function commentsList({ commentsList, onFormSubmit }) {
   const commentsCount = commentsList.length;
   return (
     <>
@@ -21,7 +21,10 @@ export default function commentsList({ commentsList }) {
             />
           </div>
 
-          <form action="submit" className="comments-form__form">
+          <form
+            className="comments-form__form"
+            onClick={(event) => onFormSubmit(event)}
+          >
             <div className="comments-form__input-container">
               <label className="comments-form__label" htmlFor="">
                 JOIN THE CONVERSATION
@@ -32,7 +35,7 @@ export default function commentsList({ commentsList }) {
               />
             </div>
 
-            <button className="comments-form__button">
+            <button type="submit" className="comments-form__button">
               <img
                 className="comments-form__upload-icon"
                 src={commentIcon}
