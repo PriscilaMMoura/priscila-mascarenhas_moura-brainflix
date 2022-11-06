@@ -4,7 +4,7 @@
 .video-details {
   margin: 24px 16px 16px 16px;
   @include breakpoint.medium {
-    margin: 36px 36px 24px 36px;
+    margin: 24px 36px 36px 36px;
   }
   &__page-header {
     font-size: 24px;
@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: row;
     @include breakpoint.medium {
-      padding: 24px 0 16px 0;
+      padding: 16px 0 8px 0;
       justify-content: space-between;
       border-top: none;
     }
@@ -63,7 +63,7 @@
     font-weight: 400;
     color: color.$color-primary-light;
     @include breakpoint.medium {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     &--channel {
@@ -71,6 +71,7 @@
       font-weight: 700;
       color: color.$color-primary-dark;
       @include breakpoint.medium {
+        font-size: 14px;
         padding-bottom: 0;
         padding-right: 24px;
       }

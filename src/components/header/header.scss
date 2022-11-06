@@ -86,6 +86,13 @@
     &:focus {
       outline: none;
     }
+    &::placeholder {
+      color: color.$color-primary-dark;
+      font: 12px;
+      @include breakpoint.medium {
+        font-size: 14px;
+      }
+    }
   }
   &__avatar-container {
     overflow: hidden;
@@ -130,6 +137,7 @@
     background-color: color.$color-primary-brand;
     display: flex;
     align-items: center;
+    padding: 12px;
     &:hover {
       background-color: color.$color-secondary-brand;
       cursor: pointer;
