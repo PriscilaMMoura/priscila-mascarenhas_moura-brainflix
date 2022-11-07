@@ -14,7 +14,6 @@ function getVideoDetails(videoId) {
 
 function App() {
   const defaultVideoId = videosData[0].id;
-  // console.log(defaultVideoId);
   const [videoId, setVideoId] = useState(defaultVideoId);
   const [videos, setVideos] = useState(getVideos(videoId));
   const [videoDetails, setVideoDetails] = useState(getVideoDetails(videoId));

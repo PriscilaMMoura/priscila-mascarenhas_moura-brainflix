@@ -10,7 +10,6 @@ export default function MainContent({
   onMainContentClick,
   onMainContentSubmit,
 }) {
-  // console.log(videoDetails);
   return (
     <>
       <section className="hero-container">

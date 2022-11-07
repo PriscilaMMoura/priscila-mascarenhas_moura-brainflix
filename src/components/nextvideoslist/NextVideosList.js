@@ -3,7 +3,6 @@ import NextVideos from "../nextvideos/NextVideos";
 import "./NextVideosList.scss";
 
 export default function NextVideosList({ videos, onVideoListClick }) {
-  // console.log(onVideoListClick);
   return (
     <div className="next-videos-container">
       <label className="next-videos-container__label-text" htmlFor="">

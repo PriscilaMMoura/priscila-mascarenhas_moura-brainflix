@@ -11,17 +11,17 @@ export default function Comments({ name, timestamp, comment }) {
   const date = formatDate(new Date(timestamp));
   return (
     <div className="comments">
-      <div class="comments__avatar-container comments__avatar"></div>
-      <div class="comments__text-container">
-        <div class="comments__name-date-container">
-          <span class="comments__copy-body-text comments__copy-body-text--user-name">
+      <div className="comments__avatar-container comments__avatar"></div>
+      <div className="comments__text-container">
+        <div className="comments__name-date-container">
+          <span className="comments__copy-body-text comments__copy-body-text--user-name">
             {name}
           </span>
-          <span class="comments__copy-body-text comments__copy-body-text--date">
+          <span className="comments__copy-body-text comments__copy-body-text--date">
             {date}
           </span>
         </div>
-        <span class="comments__copy-body-text">{comment}</span>
+        <span className="comments__copy-body-text">{comment}</span>
       </div>
     </div>
   );

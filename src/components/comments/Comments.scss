@@ -5,7 +5,7 @@
   border-top: solid 0.063rem color.$color-secondary-light;
   display: flex;
   @include breakpoint.large {
-    padding-right: 24px;
+    padding-right: 1.5rem;
   }
 
   &__avatar-container {
@@ -14,12 +14,12 @@
     min-height: 2.25rem;
     @include breakpoint.medium {
       margin-top: 1.5rem;
-      min-width: 40px;
-      min-height: 40px;
+      min-width: 2.5rem;
+      min-height: 2.5rem;
     }
     @include breakpoint.large {
-      margin-right: 36px;
-      margin-left: 16px;
+      margin-right: 2.25rem;
+      margin-left: 1rem;
     }
   }
 
@@ -47,20 +47,20 @@
   }
 
   &__copy-body-text {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
     font-weight: 400;
     color: color.$color-primary-dark;
     overflow-wrap: anywhere;
     @include breakpoint.medium {
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
     }
     @include breakpoint.large {
-      letter-spacing: 0.1px;
+      letter-spacing: 0.006rem;
     }
     &--user-name {
-      padding-bottom: 3px;
+      padding-bottom: 0.188rem;
       font-weight: 700;
     }
     &--date {

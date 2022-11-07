@@ -3,24 +3,23 @@
 
 .next-videos-container {
   background-color: color.$color-primary-ligthest;
-  padding: 16px;
-  max-width: 320px;
+  padding: 1rem;
+  max-width: 20rem;
   @include breakpoint.medium {
-    max-width: 373px;
-    padding: 24px 36px 36px 36px;
+    max-width: 23.313rem;
+    padding: 1.5rem 2.25rem 2.25rem 2.25rem;
   }
   @include breakpoint.large {
-    padding-left: 24px;
+    padding-left: 1.5rem;
     padding-right: 0;
-    max-width: 323px;
-    min-width: 323px;
+    max-width: 20.188rem;
+    min-width: 20.188rem;
   }
   &__label-text {
-    padding-bottom: 16px;
-    margin-bottom: -3px;
+    margin-bottom: -0.188rem;
     color: color.$color-primary-light;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
     font-weight: 700;
   }
 }
