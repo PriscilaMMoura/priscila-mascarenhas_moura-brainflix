@@ -23,7 +23,7 @@ export default function MainContent({
           onFormSubmit={onMainContentSubmit}
         />
       </section>
-      <section className="next-videos">
+      <section>
         <NextVideosList videos={videos} onVideoListClick={onMainContentClick} />
       </section>
     </>

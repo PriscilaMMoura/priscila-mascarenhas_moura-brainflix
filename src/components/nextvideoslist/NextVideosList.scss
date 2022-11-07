@@ -1,0 +1,20 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+
+.next-videos-container {
+  background-color: color.$color-primary-ligthest;
+  padding: 16px;
+  max-width: 320px;
+  @include breakpoint.medium {
+    max-width: 373px;
+    padding: 24px 36px 36px 36px;
+  }
+  &__label-text {
+    padding-bottom: 16px;
+    margin-bottom: -3px;
+    color: color.$color-primary-light;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}

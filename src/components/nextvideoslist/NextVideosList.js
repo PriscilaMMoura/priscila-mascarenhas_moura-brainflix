@@ -1,12 +1,13 @@
 // import "./NextVideosList.scss";
 import NextVideos from "../nextvideos/NextVideos";
+import "./NextVideosList.scss";
 
 export default function NextVideosList({ videos, onVideoListClick }) {
   // console.log(onVideoListClick);
   return (
-    <>
-      <label className="next-videos__label-text" htmlFor="">
-        NEXT VIDEO
+    <div className="next-videos-container">
+      <label className="next-videos-container__label-text" htmlFor="">
+        NEXT VIDEOS
       </label>
       {videos.map((video) => {
         return (
@@ -20,6 +21,6 @@ export default function NextVideosList({ videos, onVideoListClick }) {
           />
         );
       })}
-    </>
+    </div>
   );
 }

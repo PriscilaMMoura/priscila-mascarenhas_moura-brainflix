@@ -7,18 +7,20 @@ export default function NextVideos({
   onVideoClick,
   id,
 }) {
-  // console.log(onVideoClick);
   return (
     <div
-      className="next-videos__items-container"
+      className="next-videos-items"
       onClick={(event) => onVideoClick(event, id)}
     >
-      <div className="next-videos__image-container">
-        <img className="next-videos__image" src={image} alt="" />
+      <div className="next-videos-items__image-container">
+        <img className="next-videos-items__image" alt="" src={image} />
       </div>
-      <div className="next-videos__text-container">
-        <span>{title}</span>
-        <span>{channel}</span>
+
+      <div className="next-videos-items__text-container">
+        <span className="next-videos-items__body-copy next-videos-items__body-copy--title">
+          {title}
+        </span>
+        <span className="next-videos-items__body-copy">{channel}</span>
       </div>
     </div>
   );
