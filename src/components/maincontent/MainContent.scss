@@ -1,0 +1,21 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+
+.bottom-items-container {
+  @include breakpoint.large {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 64.5rem;
+  }
+}
+
+.comments-videos-details-container {
+  @include breakpoint.large {
+    display: flex;
+    flex-direction: column;
+    border-right: 0.063rem solid color.$color-secondary-light;
+    padding-bottom: 2.25rem;
+  }
+}

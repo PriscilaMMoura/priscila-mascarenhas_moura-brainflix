@@ -1,0 +1,71 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+
+.comments {
+  border-top: solid 0.063rem color.$color-secondary-light;
+  display: flex;
+  @include breakpoint.large {
+    padding-right: 1.5rem;
+  }
+
+  &__avatar-container {
+    margin: 1rem 1rem 0 0;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+    @include breakpoint.medium {
+      margin-top: 1.5rem;
+      min-width: 2.5rem;
+      min-height: 2.5rem;
+    }
+    @include breakpoint.large {
+      margin-right: 2.25rem;
+      margin-left: 1rem;
+    }
+  }
+
+  &__avatar {
+    max-width: 2.5rem;
+    max-height: 2.25rem;
+    border-radius: 50%;
+    background-color: color.$color-secondary-light;
+  }
+
+  &__text-container {
+    padding: 1rem 0;
+    width: 100%;
+    @include breakpoint.medium {
+      padding: 1.5rem 0;
+    }
+  }
+
+  &__name-date-container {
+    display: flex;
+    padding-bottom: 1rem;
+    @include breakpoint.large {
+      padding-bottom: 0;
+    }
+  }
+
+  &__copy-body-text {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: color.$color-primary-dark;
+    overflow-wrap: anywhere;
+    @include breakpoint.medium {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
+    @include breakpoint.large {
+      letter-spacing: 0.006rem;
+    }
+    &--user-name {
+      padding-bottom: 0.188rem;
+      font-weight: 700;
+    }
+    &--date {
+      margin-left: auto;
+      color: color.$color-primary-light;
+    }
+  }
+}

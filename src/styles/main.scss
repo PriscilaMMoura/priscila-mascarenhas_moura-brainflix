@@ -1,0 +1,41 @@
+@use "./partials/fonts" as *;
+@use "./partials/colors" as color;
+
+html,
+body,
+input,
+textarea,
+button {
+  margin: 0;
+  font-family: "AvenirNextLTPro";
+  box-sizing: border-box;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+span {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  background-color: color.$color-primary-ligthest;
+}
+.main-container {
+  background-color: color.$color-primary-ligthest;
+}
