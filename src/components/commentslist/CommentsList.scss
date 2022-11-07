@@ -8,6 +8,11 @@
   @include breakpoint.medium {
     margin: 0 36px 24px 36px;
   }
+  @include breakpoint.large {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 24px;
+  }
 
   &__comments-count {
     font-size: 13px;
@@ -38,6 +43,10 @@
       min-width: 40px;
       max-width: 40px;
       height: 40px;
+    }
+    @include breakpoint.large {
+      margin-right: 36px;
+      margin-left: 16px;
     }
   }
 
@@ -144,12 +153,13 @@
 }
 
 .comments-list-container {
-  border-top: solid 0.063rem color.$color-secondary-light;
   margin: 0 16px;
 
   @include breakpoint.medium {
     margin: 0 36px;
   }
   @include breakpoint.large {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

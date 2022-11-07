@@ -16,16 +16,21 @@ export default function MainContent({
       <section className="hero-container">
         <Hero videoDetails={videoDetails} />
       </section>
-      <section className="comments-videos-details-container">
-        <VideoDetails videoDetails={videoDetails} />
-        <CommentsList
-          commentsList={videoDetails.comments}
-          onFormSubmit={onMainContentSubmit}
-        />
-      </section>
-      <section>
-        <NextVideosList videos={videos} onVideoListClick={onMainContentClick} />
-      </section>
+      <div className="bottom-items-container">
+        <section className="comments-videos-details-container">
+          <VideoDetails videoDetails={videoDetails} />
+          <CommentsList
+            commentsList={videoDetails.comments}
+            onFormSubmit={onMainContentSubmit}
+          />
+        </section>
+        <section>
+          <NextVideosList
+            videos={videos}
+            onVideoListClick={onMainContentClick}
+          />
+        </section>
+      </div>
     </>
   );
 }
