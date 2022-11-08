@@ -5,6 +5,7 @@ import videosData from "./data/videos.json";
 import { useState } from "react";
 import "./styles/main.scss";
 
+//
 function getVideos(videoId) {
   return videosData.filter((video) => video.id !== videoId);
 }
