@@ -3,26 +3,14 @@ import logo from "../../assets/logo/BrainFlix-logo.svg";
 import searchIcon from "../../assets/icons/search.svg";
 import uploadIcon from "../../assets/icons/upload.svg";
 import avatarImage from "../../assets/images/Mohan-muruge.jpg";
-import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export default function Header({ homePageVideoId, onMainPathChange }) {
-  // const params = useParams();
-  console.log("Hello World");
-  //I fixed it, but I don't fully understand it.
-  // useEffect(() => {
-  //   if (params.videoId) {
-  //     onMainPathChange(params.videoId);
-  //   }
-  //   console.log(params);
-  //   console.log(params.videoId);
-  //   // console.log(typeof params.videoId);
-  // }, [onMainPathChange, params]);
+export default function Header({ homePageVideoId }) {
   return (
     <div className="nav-bar">
       <div className="nav-bar__logo-container">
-        <Link to={"/"}>
-          {/* <Link to={`/videos/${homePageVideoId}`}> */}
+        {/* <Link to={"/"}> */}
+        <Link to={`/videos/${homePageVideoId}`}>
           <img className="nav-bar__logo" src={logo} alt="BrainFlix logo" />
         </Link>
         {/* </Link> */}
@@ -47,7 +35,7 @@ export default function Header({ homePageVideoId, onMainPathChange }) {
             />
           </div>
         </div>
-        <Link to={`/upload`}>
+        <Link className="nav-bar__button-link" to={`/upload`}>
           <button className="nav-bar__button">
             <img className="nav-bar__upload-icon" src={uploadIcon} alt="" />
             <span className="nav-bar__button-text">UPLOAD</span>

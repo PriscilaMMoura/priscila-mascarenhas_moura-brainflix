@@ -1,12 +1,11 @@
 import Header from "./components/header/Header";
 import MainVideoPage from "./pages/main-video-page/MainVideoPage";
-import { useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useEffect } from "react";
-import axios from "axios";
-import "./styles/main.scss";
-import "./pages/main-video-page/MainVideoPage.scss";
 import VideoUploadPage from "./pages/video-upload-page/VideoUploadPage";
+import "./styles/main.scss";
+import axios from "axios";
+import { useState } from "react";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 //QUESTIONS:
 // I cilck on a video on list, it becomes the hero, but when I refresh the page, it doesn't go away and while the page is loading, I can briefly se the defautl video.
@@ -57,10 +56,7 @@ function App() {
     <BrowserRouter>
       <div className="app-container">
         <header className="header-container">
-          <Header
-            homePageVideoId={defaultVideoId}
-            onMainPathChange={handleVideoChange}
-          />
+          <Header homePageVideoId={defaultVideoId} />
         </header>
         <main className="main-container">
           <Routes>
@@ -79,7 +75,10 @@ function App() {
                 />
               }
             />
-            <Route path="upload" element={<VideoUploadPage />} />
+            <Route
+              path="upload"
+              element={<VideoUploadPage onFormSubmit={handleSubmit} />}
+            />
           </Routes>
         </main>
       </div>

@@ -26,7 +26,7 @@ export default function CommentsList({ commentsList, onFormSubmit }) {
 
           <form
             className="comments-form__form"
-            onClick={(event) => onFormSubmit(event)}
+            onSubmit={(event) => onFormSubmit(event)}
           >
             <div className="comments-form__input-container">
               <label className="comments-form__label" htmlFor="">

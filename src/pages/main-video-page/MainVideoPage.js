@@ -1,8 +1,8 @@
-import "./MainVideoPage.scss";
 import Hero from "../../components/hero/Hero";
 import VideoDetails from "../../components/videodetails/VideoDetails";
 import CommentsList from "../../components/commentslist/CommentsList";
 import NextVideosList from "../../components/nextvideoslist/NextVideosList";
+import "./MainVideoPage.scss";
 
 export default function MainVideoPage({
   videos,
