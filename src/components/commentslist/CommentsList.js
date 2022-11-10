@@ -3,8 +3,11 @@ import Comments from "../comments/Comments";
 import avatarImage from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
 
-export default function commentsList({ commentsList, onFormSubmit }) {
-  const commentsCount = commentsList.length;
+export default function CommentsList({ commentsList, onFormSubmit }) {
+  const commentsCount = commentsList?.length;
+
+  // console.log(onFormSubmit);
+
   return (
     <>
       <div className="comments-form">
@@ -47,13 +50,13 @@ export default function commentsList({ commentsList, onFormSubmit }) {
         </div>
       </div>
       <div className="comments-list-container">
-        {commentsList.map((comment) => {
+        {commentsList?.map((comment) => {
           return (
             <Comments
-              key={comment.id + comment.name}
-              name={comment.name}
-              timestamp={comment.timestamp}
-              comment={comment.comment}
+              key={comment?.id + comment?.name}
+              name={comment?.name}
+              timestamp={comment?.timestamp}
+              comment={comment?.comment}
             />
           );
         })}

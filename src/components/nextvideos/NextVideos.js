@@ -1,19 +1,36 @@
+import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import "./NextVideos.scss";
 
 export default function NextVideos({
   image,
   title,
   channel,
-  onVideoClick,
+  onVideoChange,
   id,
 }) {
+  const params = useParams();
+
+  //I fixed it, but I don't fully understand it.
+  useEffect(() => {
+    if (params.videoId) {
+      onVideoChange(params.videoId);
+    }
+  }, [onVideoChange, params]);
+
   return (
     <div
       className="next-videos-items"
-      onClick={(event) => onVideoClick(event, id)}
+      // onClick={(event) => onVideoClick(event, id)}
     >
       <div className="next-videos-items__image-container">
-        <img className="next-videos-items__image" alt="" src={image} />
+        {/* 
+        //QUESTION: 
+        //If I dont put a / in front of videos, I get the URL twice. Why?
+        */}
+        <Link to={`/videos/${id}`}>
+          <img className="next-videos-items__image" alt="" src={image} />
+        </Link>
       </div>
 
       <div className="next-videos-items__text-container">
