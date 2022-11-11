@@ -9,11 +9,11 @@ export default function Header({ homePageVideoId }) {
   return (
     <div className="nav-bar">
       <div className="nav-bar__logo-container">
-        {/* <Link to={"/"}> */}
-        <Link to={`/videos/${homePageVideoId}`}>
+        <Link to={"/"}>
+          {/* <Link to={`/videos/${homePageVideoId}`}> */}
           <img className="nav-bar__logo" src={logo} alt="BrainFlix logo" />
+          {/* </Link> */}
         </Link>
-        {/* </Link> */}
       </div>
       <div className="nav-bar__search-container">
         <div className="nav-bar__search-avatar-wrap">

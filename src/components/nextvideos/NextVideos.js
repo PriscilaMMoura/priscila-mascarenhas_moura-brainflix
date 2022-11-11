@@ -1,5 +1,5 @@
-import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
+// import { useEffect } from "react";
 import "./NextVideos.scss";
 
 export default function NextVideos({
@@ -9,14 +9,14 @@ export default function NextVideos({
   onVideoChange,
   id,
 }) {
-  const params = useParams();
+  // const params = useParams();
 
   //I fixed it, but I don't fully understand it.
-  useEffect(() => {
-    if (params.videoId) {
-      onVideoChange(params.videoId);
-    }
-  }, [onVideoChange, params]);
+  // useEffect(() => {
+  //   if (params.videoId) {
+  //     onVideoChange(params.videoId);
+  //   }
+  // }, [onVideoChange, params]);
 
   return (
     <div

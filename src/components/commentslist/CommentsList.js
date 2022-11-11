@@ -3,10 +3,12 @@ import Comments from "../comments/Comments";
 import avatarImage from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
 
-export default function CommentsList({ commentsList, onFormSubmit }) {
+export default function CommentsList({ commentsList }) {
   const commentsCount = commentsList?.length;
 
-  // console.log(onFormSubmit);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
 
   return (
     <>
@@ -26,7 +28,7 @@ export default function CommentsList({ commentsList, onFormSubmit }) {
 
           <form
             className="comments-form__form"
-            onSubmit={(event) => onFormSubmit(event)}
+            onSubmit={(event) => handleSubmit(event)}
           >
             <div className="comments-form__input-container">
               <label className="comments-form__label" htmlFor="">
