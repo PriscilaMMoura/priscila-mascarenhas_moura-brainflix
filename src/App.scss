@@ -1,5 +1,5 @@
-@use "../../styles/partials/breakpoints" as breakpoint;
-@use "../../styles/partials/colors" as color;
+@use "./styles/partials/breakpoints" as breakpoint;
+@use "./styles/partials/colors" as color;
 
 .app-container {
   display: flex;
