@@ -9,28 +9,32 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function MainVideoPage({ onMainContentSubmit }) {
+  const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
   const videosURL =
     "https://project-2-api.herokuapp.com/videos/?api_key=871acf67-7c1d-472f-8363-53d72b240ffe";
-
   const [videos, setVideos] = useState([]);
   const [videoDetails, setVideoDetails] = useState({});
-
   const params = useParams();
 
   useEffect(() => {
     const videoId = params.videoId;
-
     axios
       .get(videosURL)
       .then((response) => {
-        const videos = response.data.filter((video) => video.id !== videoId);
+        let videos = null;
+        params.videoId
+          ? (videos = response.data.filter((video) => video.id !== videoId))
+          : (videos = response.data.filter(
+              (video) => video.id !== defaultVideoId
+            ));
         setVideos(videos);
       })
       .catch((error) => console.log(error));
   }, [params.videoId]);
 
   useEffect(() => {
-    const videoId = params.videoId;
+    let videoId = null;
+    params.videoId ? (videoId = params.videoId) : (videoId = defaultVideoId);
     const videoDetailsURL = `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=871acf67-7c1d-472f-8363-53d72b240ffe`;
     axios
       .get(videoDetailsURL)
