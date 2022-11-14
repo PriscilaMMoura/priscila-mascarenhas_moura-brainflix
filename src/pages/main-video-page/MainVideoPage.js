@@ -35,7 +35,6 @@ export default function MainVideoPage({ onMainContentSubmit }) {
     axios
       .get(videoDetailsURL)
       .then((response) => {
-        //check if I really need this
         if (response.data.id === videoId) {
           const videoDetails = response.data;
           setVideoDetails(videoDetails);

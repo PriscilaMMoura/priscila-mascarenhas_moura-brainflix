@@ -50,7 +50,7 @@ export default function CommentsList({ commentsList }) {
               <img
                 className="comments-form__upload-icon"
                 src={commentIcon}
-                alt=""
+                alt="comment icon with plus sign in the middle"
               />
               <span className="comments-form__button-text">COMMENT</span>
             </button>

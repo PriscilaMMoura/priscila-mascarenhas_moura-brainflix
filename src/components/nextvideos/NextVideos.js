@@ -6,7 +6,7 @@ export default function NextVideos({ image, title, channel, id }) {
     <div className="next-videos-items">
       <div className="next-videos-items__image-container">
         <Link to={`/videos/${id}`}>
-          <img className="next-videos-items__image" alt="" src={image} />
+          <img className="next-videos-items__image" alt={title} src={image} />
         </Link>
       </div>
 

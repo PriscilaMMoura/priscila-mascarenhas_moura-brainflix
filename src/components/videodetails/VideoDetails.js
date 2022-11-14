@@ -10,12 +10,12 @@ export default function VideoDetails({ videoDetails }) {
     return `${month}/${day}/${year}`;
   };
 
-  const date = formatDate(new Date(videoDetails.timestamp));
-  const title = videoDetails.title;
-  const channel = videoDetails.channel;
-  const views = videoDetails.views;
-  const likes = videoDetails.likes;
-  const description = videoDetails.description;
+  const date = formatDate(new Date(videoDetails?.timestamp));
+  const title = videoDetails?.title;
+  const channel = videoDetails?.channel;
+  const views = videoDetails?.views;
+  const likes = videoDetails?.likes;
+  const description = videoDetails?.description;
   return (
     <>
       <div className="video-details">
@@ -31,14 +31,22 @@ export default function VideoDetails({ videoDetails }) {
 
           <div className="video-details__item-wrap">
             <div className="video-details__icons-wrap video-details__icons-wrap--views">
-              <img className="video-details__icon" src={viewsIcon} alt="" />
+              <img
+                className="video-details__icon"
+                src={viewsIcon}
+                alt="views icon: eye"
+              />
               <span className="video-details__body-copy video-details__body-copy">
                 {views}
               </span>
             </div>
 
             <div className="video-details__icons-wrap">
-              <img className="video-details__icon" src={likesIcon} alt="" />
+              <img
+                className="video-details__icon"
+                src={likesIcon}
+                alt="likes icon: heart"
+              />
               <span className="video-details__body-copy">{likes}</span>
             </div>
           </div>

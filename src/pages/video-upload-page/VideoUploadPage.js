@@ -29,7 +29,6 @@ export default function VideoUploadPage() {
                 <label className="upload-form__label-text" htmlFor="">
                   VIDEO THUMBNAIL
                 </label>
-                {/* Give image container a background color of mercury */}
                 <div className="upload-form__image-container">
                   <img
                     className="upload-form__image"
@@ -77,7 +76,7 @@ export default function VideoUploadPage() {
                 <img
                   className="upload-form__button-icon"
                   src={publishIcon}
-                  alt=""
+                  alt="publish icon: arrow pointing up with underscore on top of it"
                 />
                 <span className="upload-form__button-text">PUBLISH</span>
               </button>

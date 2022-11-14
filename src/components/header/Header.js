@@ -16,7 +16,11 @@ export default function Header() {
       <div className="nav-bar__search-container">
         <div className="nav-bar__search-avatar-wrap">
           <form className="nav-bar__input-wrapper">
-            <img className="nav-bar__search-icon" src={searchIcon} alt="" />
+            <img
+              className="nav-bar__search-icon"
+              src={searchIcon}
+              alt="search icon: magnifying glass"
+            />
 
             <input
               className="nav-bar__input"
@@ -35,7 +39,11 @@ export default function Header() {
         </div>
         <Link className="nav-bar__button-link" to={`/upload`}>
           <button className="nav-bar__button">
-            <img className="nav-bar__upload-icon" src={uploadIcon} alt="" />
+            <img
+              className="nav-bar__upload-icon"
+              src={uploadIcon}
+              alt="upload icon: arrow pointing up with underscore under it"
+            />
             <span className="nav-bar__button-text">UPLOAD</span>
           </button>
         </Link>
