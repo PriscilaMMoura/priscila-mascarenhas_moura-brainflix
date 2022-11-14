@@ -1,19 +1,13 @@
+import { Link } from "react-router-dom";
 import "./NextVideos.scss";
 
-export default function NextVideos({
-  image,
-  title,
-  channel,
-  onVideoClick,
-  id,
-}) {
+export default function NextVideos({ image, title, channel, id }) {
   return (
-    <div
-      className="next-videos-items"
-      onClick={(event) => onVideoClick(event, id)}
-    >
+    <div className="next-videos-items">
       <div className="next-videos-items__image-container">
-        <img className="next-videos-items__image" alt="" src={image} />
+        <Link to={`/videos/${id}`}>
+          <img className="next-videos-items__image" alt={title} src={image} />
+        </Link>
       </div>
 
       <div className="next-videos-items__text-container">

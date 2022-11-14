@@ -27,15 +27,3 @@ span {
 *::after {
   box-sizing: inherit;
 }
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.header-container {
-  background-color: color.$color-primary-ligthest;
-}
-.main-container {
-  background-color: color.$color-primary-ligthest;
-}
