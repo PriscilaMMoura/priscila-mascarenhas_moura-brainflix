@@ -3,8 +3,13 @@ import Comments from "../comments/Comments";
 import avatarImage from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
 
-export default function commentsList({ commentsList, onFormSubmit }) {
-  const commentsCount = commentsList.length;
+export default function CommentsList({ commentsList }) {
+  const commentsCount = commentsList?.length;
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <div className="comments-form">
@@ -23,14 +28,20 @@ export default function commentsList({ commentsList, onFormSubmit }) {
 
           <form
             className="comments-form__form"
-            onClick={(event) => onFormSubmit(event)}
+            onSubmit={(event) => handleSubmit(event)}
           >
             <div className="comments-form__input-container">
               <label className="comments-form__label" htmlFor="">
                 JOIN THE CONVERSATION
               </label>
+              <textarea
+                className="comments-form__input comments-form__input--small"
+                placeholder="Add a new comment"
+                cols="30"
+                rows="5"
+              ></textarea>
               <input
-                className="comments-form__input"
+                className="comments-form__input comments-form__input--mid"
                 placeholder="Add a new comment"
               />
             </div>
@@ -39,7 +50,7 @@ export default function commentsList({ commentsList, onFormSubmit }) {
               <img
                 className="comments-form__upload-icon"
                 src={commentIcon}
-                alt=""
+                alt="comment icon with plus sign in the middle"
               />
               <span className="comments-form__button-text">COMMENT</span>
             </button>
@@ -47,13 +58,13 @@ export default function commentsList({ commentsList, onFormSubmit }) {
         </div>
       </div>
       <div className="comments-list-container">
-        {commentsList.map((comment) => {
+        {commentsList?.map((comment) => {
           return (
             <Comments
-              key={comment.id + comment.name}
-              name={comment.name}
-              timestamp={comment.timestamp}
-              comment={comment.comment}
+              key={comment?.id + comment?.name}
+              name={comment?.name}
+              timestamp={comment?.timestamp}
+              comment={comment?.comment}
             />
           );
         })}
