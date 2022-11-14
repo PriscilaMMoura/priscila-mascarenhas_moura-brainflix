@@ -12,14 +12,8 @@ export default function MainVideoPage({ onMainContentSubmit }) {
   const videosURL =
     "https://project-2-api.herokuapp.com/videos/?api_key=871acf67-7c1d-472f-8363-53d72b240ffe";
 
-  // const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
-  // const [videoId, setVideoId] = useState(defaultVideoId);
   const [videos, setVideos] = useState([]);
   const [videoDetails, setVideoDetails] = useState({});
-
-  // const handleVideoChange = (videoId) => {
-  //   setVideoId(videoId);
-  // };
 
   const params = useParams();
 
@@ -34,8 +28,6 @@ export default function MainVideoPage({ onMainContentSubmit }) {
       })
       .catch((error) => console.log(error));
   }, [params.videoId]);
-  //QUESTIONS:
-  //Why does it complain when I remove the dependencies.
 
   useEffect(() => {
     const videoId = params.videoId;
@@ -51,7 +43,6 @@ export default function MainVideoPage({ onMainContentSubmit }) {
       })
       .catch((error) => console.log(error));
   }, [params.videoId]);
-  // console.log(params);
 
   return (
     <>
@@ -67,10 +58,7 @@ export default function MainVideoPage({ onMainContentSubmit }) {
           />
         </section>
         <section>
-          <NextVideosList
-            videos={videos}
-            // onVideoListChange={onMainVideoChange}
-          />
+          <NextVideosList videos={videos} />
         </section>
       </div>
     </>

@@ -5,14 +5,12 @@ import uploadIcon from "../../assets/icons/upload.svg";
 import avatarImage from "../../assets/images/Mohan-muruge.jpg";
 import { Link } from "react-router-dom";
 
-export default function Header({ homePageVideoId }) {
+export default function Header() {
   return (
     <div className="nav-bar">
       <div className="nav-bar__logo-container">
         <Link to={"/"}>
-          {/* <Link to={`/videos/${homePageVideoId}`}> */}
           <img className="nav-bar__logo" src={logo} alt="BrainFlix logo" />
-          {/* </Link> */}
         </Link>
       </div>
       <div className="nav-bar__search-container">

@@ -34,8 +34,14 @@ export default function CommentsList({ commentsList }) {
               <label className="comments-form__label" htmlFor="">
                 JOIN THE CONVERSATION
               </label>
+              <textarea
+                className="comments-form__input comments-form__input--small"
+                placeholder="Add a new comment"
+                cols="30"
+                rows="5"
+              ></textarea>
               <input
-                className="comments-form__input"
+                className="comments-form__input comments-form__input--mid"
                 placeholder="Add a new comment"
               />
             </div>

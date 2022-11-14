@@ -1,0 +1,193 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+
+.upload-container {
+  border-top: 0.063rem solid color.$color-secondary-light;
+}
+
+.upload-form-wrap {
+  margin: 1.5rem 1rem 1rem 1rem;
+  @include breakpoint.medium {
+    margin: 2.25rem 1.5rem;
+  }
+  @include breakpoint.large {
+    max-width: 64.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.upload-form {
+  &__page-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: color.$color-primary-dark;
+    padding-bottom: 1rem;
+    @include breakpoint.medium {
+      font-size: 2.063rem;
+      line-height: 2.75rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__thumbnail-input-wrap {
+    @include breakpoint.medium {
+      border-top: 0.063rem solid color.$color-secondary-light;
+      border-bottom: 0.063rem solid color.$color-secondary-light;
+    }
+    @include breakpoint.large {
+      display: flex;
+      flex-direction: row;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      width: 100%;
+    }
+  }
+
+  &__thumbnail-area {
+    padding-bottom: 1rem;
+    @include breakpoint.medium {
+      padding: 1.5rem 0;
+    }
+    @include breakpoint.large {
+      padding: 0;
+      width: 35%;
+    }
+  }
+  &__label-text {
+    color: color.$color-primary-light;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+  }
+  &__image-container {
+    width: 100%;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    background-color: color.$color-secondary-light;
+    @include breakpoint.medium {
+      width: 50%;
+    }
+    @include breakpoint.large {
+      width: auto;
+    }
+  }
+  &__image {
+    border-radius: 0.25rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: -0.313rem;
+    object-fit: cover;
+  }
+
+  &__fields {
+    @include breakpoint.large {
+      border-bottom: none;
+      width: 73%;
+      margin-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  &__input-area {
+    padding-bottom: 1rem;
+    @include breakpoint.medium {
+      padding-bottom: 1.5rem;
+    }
+    @include breakpoint.large {
+      padding-bottom: 0;
+    }
+  }
+  &__input {
+    background-color: color.$color-secondary-lightest;
+    border-radius: 0.25rem;
+    border: 0.063rem solid color.$color-secondary-light;
+    width: 100%;
+    padding: 0.75rem;
+    &--title {
+      height: 2.5rem;
+      &::placeholder {
+        color: color.$color-primary-dark;
+        font-size: 0.75rem;
+        @include breakpoint.medium {
+          font-size: 0.875rem;
+        }
+      }
+    }
+    &--description {
+      height: 4.625rem;
+      resize: none;
+      @include breakpoint.large {
+        margin-bottom: -0.375em;
+        height: 5.625rem;
+      }
+      &::placeholder {
+        color: color.$color-primary-dark;
+        font-size: 0.75rem;
+        @include breakpoint.medium {
+          font-size: 0.875rem;
+        }
+      }
+    }
+    &:focus {
+      outline: none;
+      border: 0.125rem solid color.$color-primary-brand;
+    }
+  }
+  &__buttons-area {
+    @include breakpoint.medium {
+      padding-top: 1.5rem;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+  &__buttons {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    border: 0;
+    padding: 0.75rem;
+    font-size: 0.75rem;
+    text-align: center;
+    font-weight: 700;
+    @include breakpoint.medium {
+      max-width: 9.375rem;
+      min-width: 9.375rem;
+    }
+    &--publish {
+      display: flex;
+      align-items: center;
+      background-color: color.$color-primary-brand;
+      color: color.$color-primary-ligthest;
+      margin-bottom: 1rem;
+      @include breakpoint.medium {
+        margin-bottom: 0;
+        margin-left: 1.5rem;
+      }
+      &:hover {
+        background-color: color.$color-secondary-brand;
+      }
+    }
+    &--cancel {
+      background-color: color.$color-primary-ligthest;
+      color: color.$color-primary-brand;
+      padding-left: 1.5rem;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__button-icon {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+  &__button-text {
+    color: color.$color-primary-ligthest;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin: 0 auto;
+  }
+}
