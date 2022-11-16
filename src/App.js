@@ -3,7 +3,7 @@ import MainVideoPage from "./pages/main-video-page/MainVideoPage";
 import VideoUploadPage from "./pages/video-upload-page/VideoUploadPage";
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+//
 function App() {
   return (
     <BrowserRouter>
