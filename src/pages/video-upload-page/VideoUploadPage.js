@@ -3,9 +3,27 @@ import thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function VideoUploadPage() {
   const navigate = useNavigate();
+
+  const [title, setTitle] = useState("default");
+  const [description, setDescription] = useState("default");
+
+  const isTitleValid = () => {
+    if (title === "") {
+      return false;
+    }
+    return true;
+  };
+
+  const isDescriptionValid = () => {
+    if (description === "") {
+      return false;
+    }
+    return true;
+  };
 
   const uploadToApi = (newVideoDetails) => {
     axios
@@ -23,10 +41,16 @@ export default function VideoUploadPage() {
       image: "http://localhost:8080/images/image9.jpeg",
       description: event.target.description.value,
     };
-    uploadToApi(newVideoDetails);
-    alert("Upload Completed");
-    navigate("/");
-    event.target.reset();
+
+    setTitle(event.target.title.value);
+    setDescription(event.target.description.value);
+
+    if (event.target.title.value && event.target.description.value) {
+      uploadToApi(newVideoDetails);
+      alert("Upload Completed");
+      navigate("/");
+      event.target.reset();
+    }
   };
 
   const handleClick = (event) => {
@@ -63,7 +87,9 @@ export default function VideoUploadPage() {
                     TITLE YOUR VIDEO
                   </label>
                   <input
-                    className="upload-form__input upload-form__input--title"
+                    className={`upload-form__input upload-form__input--title ${
+                      isTitleValid() ? "" : "upload-form__input--invalid"
+                    }`}
                     placeholder="Add a title to your video"
                     cols="30"
                     rows="5"
@@ -80,7 +106,9 @@ export default function VideoUploadPage() {
                     ADD A VIDEO DESCRIPTION
                   </label>
                   <textarea
-                    className="upload-form__input upload-form__input--description"
+                    className={`upload-form__input upload-form__input--description ${
+                      isDescriptionValid() ? "" : "upload-form__input--invalid"
+                    }`}
                     placeholder="Add a description to your video"
                     cols="30"
                     rows="3"
@@ -93,7 +121,6 @@ export default function VideoUploadPage() {
             <div className="upload-form__buttons-area">
               <button
                 name="publishButton"
-                // onClick={handleClick}
                 className="upload-form__buttons upload-form__buttons--publish"
                 type="submit"
               >
