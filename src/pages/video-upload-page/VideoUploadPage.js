@@ -69,7 +69,7 @@ export default function VideoUploadPage() {
           <form className="upload-form__form" onSubmit={handleSubmit}>
             <div className="upload-form__thumbnail-input-wrap">
               <div className="upload-form__thumbnail-area">
-                <label className="upload-form__label-text" htmlFor="">
+                <label className="upload-form__label-text">
                   VIDEO THUMBNAIL
                 </label>
                 <div className="upload-form__image-container">
