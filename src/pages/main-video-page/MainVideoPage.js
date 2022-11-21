@@ -10,8 +10,7 @@ import { useParams } from "react-router-dom";
 
 export default function MainVideoPage({ onMainContentSubmit }) {
   const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
-  const videosURL =
-    "https://project-2-api.herokuapp.com/videos/?api_key=871acf67-7c1d-472f-8363-53d72b240ffe";
+  const videosURL = "http://localhost:8080/videos";
   const [videos, setVideos] = useState([]);
   const [videoDetails, setVideoDetails] = useState({});
   const params = useParams();
@@ -35,7 +34,7 @@ export default function MainVideoPage({ onMainContentSubmit }) {
   useEffect(() => {
     let videoId = null;
     params.videoId ? (videoId = params.videoId) : (videoId = defaultVideoId);
-    const videoDetailsURL = `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=871acf67-7c1d-472f-8363-53d72b240ffe`;
+    const videoDetailsURL = `http://localhost:8080/videos/${videoId}`;
     axios
       .get(videoDetailsURL)
       .then((response) => {

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import "./NextVideos.scss";
+import { Link } from "react-router-dom";
 
 export default function NextVideos({ image, title, channel, id }) {
   return (

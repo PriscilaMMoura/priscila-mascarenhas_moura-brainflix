@@ -1,5 +1,5 @@
-import "./CommentsList.scss";
 import Comments from "../comments/Comments";
+import "./CommentsList.scss";
 import avatarImage from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
 
@@ -31,7 +31,7 @@ export default function CommentsList({ commentsList }) {
             onSubmit={(event) => handleSubmit(event)}
           >
             <div className="comments-form__input-container">
-              <label className="comments-form__label" htmlFor="">
+              <label className="comments-form__label" htmlFor="userComments">
                 JOIN THE CONVERSATION
               </label>
               <textarea
@@ -39,6 +39,7 @@ export default function CommentsList({ commentsList }) {
                 placeholder="Add a new comment"
                 cols="30"
                 rows="5"
+                id="userComments"
               ></textarea>
               <input
                 className="comments-form__input comments-form__input--mid"
